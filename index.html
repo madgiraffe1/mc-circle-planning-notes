@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minecraft circle planning notes: footprint, rows and wall layers</title>
+  <meta name="description" content="A practical Minecraft circle reference from the MC Circle Tool team: choose a footprint, read row spans and estimate floor and wall blocks.">
+  <style>
+    body { margin: 0; background: #faf9f6; color: #242621; font: 18px/1.65 system-ui, sans-serif; }
+    main { max-width: 760px; margin: auto; padding: 48px 24px; }
+    h1, h2 { line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 5vw, 2.8rem); }
+    h2 { margin-top: 2em; font-size: 1.35rem; }
+    a { color: #245b3a; text-underline-offset: .2em; }
+    a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+    .byline, footer { font-size: .92rem; color: #52574d; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5em 0; }
+    th, td { text-align: left; padding: .65em .4em; border-bottom: 1px solid #d5d8cf; }
+    caption { text-align: left; font-weight: 600; margin-bottom: .5em; }
+    footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #d5d8cf; }
+    @media (max-width: 480px) { body { font-size: 17px; } main { padding: 28px 18px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <header>
+        <p class="byline">Original reference notes by the MC Circle Tool team · 12 October 2026</p>
+        <h1>Minecraft circle planning notes: footprint, rows and wall layers</h1>
+      </header>
+
+      <p>A circle plan is useful before the first block goes down: it separates the shape on the ground from everything you will build above it. These notes explain how to choose a footprint, follow a row and turn a flat outline into a wall estimate. Our free, browser-based <a href="https://mccircletool.com/">MC Circle Tool</a> provides a grid reference without requiring an account. You can also use the planning steps below with a printed grid.</p>
+
+      <h2>Start with the footprint, then decide what it supports</h2>
+      <p>Write down the outer diameter in blocks. A diameter of 31 means the circle fits inside a 31 by 31 bounding square; the empty corners of that square are not part of the circle. Check that this footprint fits the site before choosing wall height, roof shape or decoration. For a tower, decide whether the outline represents the outside face of the wall. For a pond, decide whether it represents the water surface or the surrounding border. Changing that interpretation halfway through changes the space inside.</p>
+
+      <h2>Mark the center and keep the same orientation</h2>
+      <p>An odd diameter has a center cell. An even diameter is centered at the intersection of four cells. Mark that center before placing the first row, especially when a path or doorway must line up with another structure. A single center block is convenient for an odd-width layout; an even-width layout needs a mark between blocks instead. Choose which edge of your work area represents the top of the plan, and keep that choice throughout the build. Grid columns are positions within the plan, not your world's coordinates.</p>
+
+      <h2>Read each row as a span of occupied cells</h2>
+      <p>Use the same row and column numbering every time. In the 31-block outline example, the first row occupies columns 13 through 19 when columns are numbered from 1. That is seven blocks: the inclusive count is 19 minus 13 plus 1. Place that centered run, then move to the next row of the reference. Do not assume every later row is one continuous run; an outline can have separate left and right spans with empty cells between them.</p>
+      <p>Pause after a few rows to compare both sides with the plan. It is easier to correct a misplaced span before another layer hides it. The <a href="https://mccircletool.com/guides/how-to-build-a-circle/">MC Circle Tool circle building guide</a> gives a longer walkthrough of this grid-based method.</p>
+
+      <h2>Keep floor counts separate from wall counts</h2>
+      <p>The examples here use the tool's outline convention: a boundary taken from the filled interior by checking the four neighboring cells, north, south, east and west. Other circle methods may select different boundary blocks, so use one plan consistently rather than combining rows from several generators.</p>
+
+      <table>
+        <caption>Blocks in one flat layer using this convention</caption>
+        <thead><tr><th scope="col">Outer diameter</th><th scope="col">Outline</th><th scope="col">Filled disk</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">15 blocks</th><td>40 blocks</td><td>177 blocks</td></tr>
+          <tr><th scope="row">31 blocks</th><td>84 blocks</td><td>749 blocks</td></tr>
+        </tbody>
+      </table>
+
+      <p>A 31-block outline repeated across four identical wall layers needs 84 × 4 = 336 blocks. That figure excludes openings, foundations and decoration. Subtract door or window cells from the layers where they occur, then add the separate details you plan to build. A filled disk is a floor estimate for one layer; it is not a count for a solid tower or a roof.</p>
+
+      <h2>Save the plan and progress as different things</h2>
+      <p>A PNG export is a visual building reference, not a Minecraft schematic that places blocks in the game. Keep it where you can consult it while building, and record the diameter, mode and orientation alongside it. The tool's share link contains plan parameters, not your completed-block progress. Local progress belongs to that browser, and the exported image does not store it. If you move to another browser or device, treat the saved plan as the shape reference and carry your progress notes separately.</p>
+
+      <h2>A small check before adding height</h2>
+      <p>Finish the footprint and compare its opposite sides before stacking more layers. Confirm the center alignment, the first row and the widest part of the circle. Check the planned entrance against the interior space. Then keep separate totals for the floor, repeated wall layers and additional details. This short check gives you a stable base for the next part of the build, without expecting a flat circle plan to decide the entire structure.</p>
+    </article>
+    <footer>
+      <p>Prepared by the MC Circle Tool team with AI assistance. This is our own reference note, not a third-party endorsement. Minecraft is a trademark of Mojang. This page is not an official Minecraft product and is not affiliated with Mojang or Microsoft.</p>
+    </footer>
+  </main>
+</body>
+</html>
